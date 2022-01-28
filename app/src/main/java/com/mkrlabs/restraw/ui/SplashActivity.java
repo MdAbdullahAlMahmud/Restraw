@@ -1,4 +1,4 @@
-package com.mkrlabs.restraw;
+package com.mkrlabs.restraw.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.mkrlabs.customstatusbar.CustomStatusBar;
+import com.mkrlabs.restraw.R;
+import com.mkrlabs.restraw.authentication.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -21,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
                 finish();
             }
         },3000);
