@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Restraw</string>
+
+    <string name="qrCodeDesc">Scan to see  the items \n Available here</string>
 </resources>

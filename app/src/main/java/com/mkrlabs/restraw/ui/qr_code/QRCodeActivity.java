@@ -1,36 +1,39 @@
-package com.mkrlabs.restraw.authentication;
+package com.mkrlabs.restraw.ui.qr_code;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
 import com.mkrlabs.customstatusbar.CustomStatusBar;
 import com.mkrlabs.restraw.R;
-import com.mkrlabs.restraw.ui.qr_code.QRCodeActivity;
+import com.mkrlabs.restraw.ui.HomeActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class QRCodeActivity extends AppCompatActivity {
 
-    private TextView takeATourTV;
+    MaterialButton exploreRestrawButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         CustomStatusBar.transparentStatusBarWithIcon(this,false);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_qrcode);
         inits();
-        takeATourTV.setOnClickListener(new View.OnClickListener() {
+
+        exploreRestrawButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, QRCodeActivity.class);
+                Intent intent = new Intent(QRCodeActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
+
     }
 
     private void inits() {
-        takeATourTV =findViewById(R.id.takeATourTV);
+        exploreRestrawButton= findViewById(R.id.exploreRestrawButton);
     }
 }

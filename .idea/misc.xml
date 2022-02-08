@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/qr_scan_layout_design.xml" value="0.2890625" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/registration_button_shape.xml" value="0.2890625" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_home.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_qrcode.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
       </map>
     </option>
