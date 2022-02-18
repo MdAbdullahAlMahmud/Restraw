@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primaryColor">#FF5D5D</color>
+    <color name="primaryColor">#FF774D</color>
     <color name="primaryColorHint">#8AFF5D5D</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="toolbarColor">#AA4829</color>
 </resources>
