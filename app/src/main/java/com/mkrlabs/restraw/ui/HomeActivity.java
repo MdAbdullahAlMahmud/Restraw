@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         foodItems.add(new FoodItem("Pizza3","https://www.irishtimes.com/polopoly_fs/1.4245295.1588671124!/image/image.jpg_gen/derivatives/ratio_16x9_w1200/image.jpg"));
         foodItems.add(new FoodItem("Pizza4","https://c.ndtvimg.com/2020-07/ds980vng_pizza_625x300_07_July_20.jpg"));
         foodItems.add(new FoodItem("Pizza5","https://c.ndtvimg.com/2020-07/ds980vng_pizza_625x300_07_July_20.jpg"));
-        foodItems.add(new FoodItem("Pizza4","https://c.ndtvimg.com/2020-07/ds980vng_pizza_625x300_07_July_20.jpg"));
+        foodItems.add(new FoodItem("Pizza6","https://c.ndtvimg.com/2020-07/ds980vng_pizza_625x300_07_July_20.jpg"));
 
         ModelClass food_section = new ModelClass(ModelClass.FOOD_ITEM_LAYOUT,foodItems,"Pizza");
         ModelClass burger_section = new ModelClass(ModelClass.FOOD_ITEM_LAYOUT,foodItems,"Burger");
