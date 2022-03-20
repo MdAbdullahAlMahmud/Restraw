@@ -1,6 +1,7 @@
 package com.mkrlabs.restraw.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.mkrlabs.restraw.R;
 import com.mkrlabs.restraw.model.FoodItem;
+import com.mkrlabs.restraw.ui.food_details.FoodDetailsActivity;
+import com.mkrlabs.restraw.utils.KeyName;
 
 import java.util.List;
 
@@ -39,7 +42,17 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodItemViewHo
         FoodItem foodItem = foodItemList.get(position);
         Glide.with(holder.itemView).load(foodItem.getFoodImage()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.foodImageRV);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, FoodDetailsActivity.class);
+                intent.putExtra(KeyName.FOOD_DETAILS,foodItem);
+                context.startActivity(intent);
+            }
+        });
+
     }
+
 
     @Override
     public int getItemCount() {

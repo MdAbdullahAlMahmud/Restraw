@@ -12,4 +12,7 @@
     <color name="primaryColorHint">#8AFF5D5D</color>
     <color name="textColor">#FFFFFF</color>
     <color name="toolbarColor">#AA4829</color>
+    <color name="chipBackgroundColor">#55FF774D</color>
+    <color name="chipIconSelected">#020202</color>
+    <color name="chipIconNotSelected">#FF1744</color>
 </resources>

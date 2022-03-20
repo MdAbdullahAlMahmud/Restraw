@@ -1,6 +1,8 @@
 package com.mkrlabs.restraw.model;
 
-public class FoodItem {
+import java.io.Serializable;
+
+public class FoodItem implements Serializable {
 
     private String foodName;
     private String foodImage;
