@@ -21,12 +21,13 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp"
         android:layout_margin="6dp"
+        android:background="?android:attr/selectableItemBackground"
         android:padding="10dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -37,6 +38,26 @@
             android:layout_gravity="center"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/primaryColor" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/addToTryListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_outline_favorite_24"
             android:tint="@color/primaryColor" />
     </androidx.cardview.widget.CardView>
 
@@ -160,6 +181,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_supervisor_account_24"
             android:drawablePadding="10dp"
+            android:drawableTint="@color/primaryColor"
             android:gravity="center"
             android:text="600" />
 

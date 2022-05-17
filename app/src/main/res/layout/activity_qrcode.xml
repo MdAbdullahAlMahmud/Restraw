@@ -9,6 +9,7 @@
     tools:context=".ui.qr_code.QRCodeActivity">
 
     <TextView
+        android:id="@+id/qrText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/qrCodeDesc"
@@ -30,6 +31,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scanQrCode"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Scan QR Code"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/exploreRestrawButton"

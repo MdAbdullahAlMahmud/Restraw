@@ -11,7 +11,7 @@
         />
     <item
         android:id="@+id/tryList"
-        android:icon="@drawable/ic_baseline_flutter_dash_24"
+        android:icon="@drawable/ic_baseline_favorite_border_24"
         android:title="Try List"
         app:cnb_backgroundColor="@color/white"
         app:cnb_iconColor="@color/black"
@@ -21,7 +21,7 @@
         android:id="@+id/takeTour"
         android:icon="@drawable/ic_baseline_flutter_dash_24"
         android:title="Tour"
-        app:cnb_backgroundColor="@color/primaryColor"
+        app:cnb_backgroundColor="@color/white"
         app:cnb_iconColor="@color/black"
         app:cnb_textColor="@color/black"/>
 
@@ -29,7 +29,7 @@
         android:id="@+id/person"
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="Profile"
-        app:cnb_backgroundColor="@color/primaryColor"
+        app:cnb_backgroundColor="@color/white"
         app:cnb_iconColor="@color/black"
         app:cnb_textColor="@color/black"/>
 </menu>
