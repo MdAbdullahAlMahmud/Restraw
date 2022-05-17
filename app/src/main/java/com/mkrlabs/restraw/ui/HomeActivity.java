@@ -1,11 +1,18 @@
 package com.mkrlabs.restraw.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.mkrlabs.restraw.R;
 import com.mkrlabs.restraw.adapter.Adapter;
 import com.mkrlabs.restraw.model.FoodItem;
@@ -19,12 +26,19 @@ public class HomeActivity extends AppCompatActivity {
     private List<ModelClass> modelClassList;
     private Adapter adapter;
     private RecyclerView homeRV;
+    ChipNavigationBar bottomNavigation;
+    private DrawerLayout home_drawer;
+    private TextView navProfileTV,navTryList,navSetting,navRate,navAbout,navVersion,navLogoutTV;
+    private ImageButton navButton;
 
     private String url = "https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        inits();
+        initLeftDrawer();
+        initLeftDrawerClickListener();
         setUpRecycleView();
 
         modelClassList = new ArrayList<>();
@@ -61,7 +75,19 @@ public class HomeActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
 
+        bottomNavigation.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int i) {
+                Log.v("tag",i+"");
+            }
+        });
 
+        navButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                home_drawer.openDrawer(GravityCompat.START);
+            }
+        });
 
 
 
@@ -73,6 +99,13 @@ public class HomeActivity extends AppCompatActivity {
         ModelClass chik_section = new ModelClass(ModelClass.FOOD_ITEM_LAYOUT,foodItems,"Pizza");
  */
 
+    private void inits(){
+        navButton= findViewById(R.id.navButton);
+        bottomNavigation = findViewById(R.id.bottomNavigation);
+
+        home_drawer = findViewById(R.id.home_drawer);
+
+    }
     private List<FoodItem> getSliderFoodList(){
         List<FoodItem> sliderItemList = new ArrayList<>();
         //dummy data
@@ -94,4 +127,69 @@ public class HomeActivity extends AppCompatActivity {
         homeRV.setHasFixedSize(true);
         homeRV.setLayoutManager(new LinearLayoutManager(this));
     }
+
+
+    private void initLeftDrawerClickListener() {
+
+
+       /* navContactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                *//*Intent intent = new Intent(HomeActivity.this, ContactUsActivity.class);
+                startActivity(intent);
+                home_drawer.closeDrawer(GravityCompat.START);*//*
+            }
+        });
+        navFeedBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                *//*Intent intent = new Intent(HomeActivity.this, FeedbackActivity.class);
+                startActivity(intent);
+                home_drawer.closeDrawer(GravityCompat.START);*//*
+            }
+        });
+
+        navFAQTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                *//*Intent intent = new Intent(HomeActivity.this, FAQActivity.class);
+                startActivity(intent);
+                home_drawer.closeDrawer(GravityCompat.START);*//*
+            }
+        });
+
+        navProfileTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               *//* Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+                home_drawer.closeDrawer(GravityCompat.START);*//*
+            }
+        });
+
+
+
+        navLogoutTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               *//* userLogOut();
+                home_drawer.closeDrawer(GravityCompat.START);*//*
+            }
+        });*/
+
+    }
+
+
+
+    private void initLeftDrawer() {
+        navProfileTV=findViewById(R.id.navProfileTV);
+        navTryList=findViewById(R.id.navTryList);
+        navSetting=findViewById(R.id.navSettings);
+        navRate=findViewById(R.id.navRateTv);
+        navAbout=findViewById(R.id.navAboutTv);
+        navVersion=findViewById(R.id.navVersion);
+        navLogoutTV=findViewById(R.id.navLogoutTV);
+
+    }
+
 }

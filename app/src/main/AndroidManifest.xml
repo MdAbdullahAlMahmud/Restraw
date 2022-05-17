@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restraw">
         <activity
+            android:name=".ui.restaurant_tour.RestaurantsTourActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.food_details.FoodDetailsActivity"
             android:exported="false" />
         <activity

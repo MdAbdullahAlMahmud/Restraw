@@ -4,19 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/bg_overlay.xml" value="0.2890625" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/bottom_navigation_background.xml" value="0.2890625" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/ic_baseline_supervisor_account_24.xml" value="0.2890625" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/qr_scan_layout_design.xml" value="0.2890625" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/drawable/registration_button_shape.xml" value="0.2890625" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_food_details.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_home.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_qrcode.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_restaurants_tour.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/cold_drinks_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/food_item.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/food_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/home_app_bar.xml" value="0.25" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/image_slider_layout_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/nav_design.xml" value="0.25" />
         <entry key="..\:/Android Project/Restraw/app/src/main/res/layout/slider_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Project/Restraw/app/src/main/res/menu/menu.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>
