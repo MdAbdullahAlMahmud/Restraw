@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,12 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restraw">
         <activity
+            android:name=".TryListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.restaurant_tour.RestaurantsTourActivity"
             android:exported="false" />
-         <activity
+        <activity
             android:name=".utils.QRScanner"
             android:exported="false" />
-
         <activity
             android:name=".ui.food_details.FoodDetailsActivity"
             android:exported="false" />
