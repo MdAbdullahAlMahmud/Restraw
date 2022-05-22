@@ -26,7 +26,7 @@
         app:cnb_textColor="@color/black"/>
 
     <item
-        android:id="@+id/person"
+        android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="Profile"
         app:cnb_backgroundColor="@color/white"

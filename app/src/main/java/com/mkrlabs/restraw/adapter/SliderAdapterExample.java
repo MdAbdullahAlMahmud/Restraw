@@ -84,9 +84,9 @@ public class SliderAdapterExample  extends
 
         public SliderAdapterVH(View itemView) {
             super(itemView);
-            imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
+            imageViewBackground = itemView.findViewById(R.id.try_list_item_image);
             imageGifContainer = itemView.findViewById(R.id.iv_gif_container);
-            textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
+            textViewDescription = itemView.findViewById(R.id.try_list_item_name);
             this.itemView = itemView;
         }
     }

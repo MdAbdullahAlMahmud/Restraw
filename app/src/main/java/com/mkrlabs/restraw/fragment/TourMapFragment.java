@@ -108,6 +108,8 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
                         if (userLocation != null) {
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
                             moveCameraToLocation(latLng, DEFAULT_ZOOM);
+                            Toasty.info(getContext(),"User Location Found ");
+
 
                         } else {
                             Toasty.info(getContext(),"Unable to find current location");
@@ -181,6 +183,7 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+        Toasty.info(getContext(),"Map Ready");
         this.googleMap = googleMap;
         if (mLocationPermission) {
             getDeviceCurrentLocation();
