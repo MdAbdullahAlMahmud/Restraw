@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.mkrlabs.restraw.R;
 import com.mkrlabs.restraw.adapter.Adapter;
+import com.mkrlabs.restraw.fragment.TourMapFragment;
 import com.mkrlabs.restraw.model.FoodItem;
 import com.mkrlabs.restraw.model.ModelClass;
 
@@ -79,6 +81,11 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(int i) {
                 Log.v("tag",i+"");
+                if (i==2){
+                    /*Intent intent = new Intent(this, TourMapFragment.class);
+                    startActivity(intent);*/
+                }
+
             }
         });
 
