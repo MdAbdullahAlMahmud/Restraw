@@ -40,7 +40,7 @@ public class TryListAdapter extends  RecyclerView.Adapter<TryListAdapter.TryList
         FoodItem foodItem = tryList.get(position);
 
         holder.name.setText(foodItem.getFoodName());
-        holder.price.setText(getRandomPrice());
+        holder.price.setText("$"+getRandomPrice());
         Glide.with(holder.itemView).
                 load(foodItem.getFoodImage()).diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.image);

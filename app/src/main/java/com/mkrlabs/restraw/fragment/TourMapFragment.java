@@ -12,9 +12,11 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -60,16 +62,18 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tour_map, container, false);
-        init(view);
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         getLocationPermission();
 
     }
+
+
     private void getLocationPermission() {
 
 
@@ -92,6 +96,7 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
 
 
     }
+
     private void getDeviceCurrentLocation() {
 
         Log.d(TAG, "getDeviceCurrentLocation ");
@@ -108,14 +113,12 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
                         if (userLocation != null) {
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
                             moveCameraToLocation(latLng, DEFAULT_ZOOM);
-                            Toasty.info(getContext(),"User Location Found ");
-
 
                         } else {
-                            Toasty.info(getContext(),"Unable to find current location");
+                            Toasty.info(getContext(), "Unable to find current location").show();
                         }
                     } else {
-                        Toasty.info(getContext(),"Unable to find current location");
+                        Toasty.info(getContext(), "Unable to find current location").show();
                     }
                 }
             });
@@ -124,6 +127,8 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
         }
     }
     private void moveCameraToLocation(LatLng latLng, float zoom) {
+        Log.v(TAG, "Move Camera to Location ");
+
         String from =latLng.latitude+","+ latLng.longitude;
         String to = "23.752981287671716, 90.3777078984378";
         //getDirectionOfMap(from,to);
@@ -138,28 +143,26 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
 
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(latLng)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_baseline_restaurant_menu_24))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.map_user_home_pin_icon))
                 .title("Sweet Home")
                 .snippet("current location");
         //23.752981287671716, 90.3777078984378
 
-        // LatLng diuLatLng = new LatLng(23.752981287671716,90.3777078984378);
-      /*  MarkerOptions diuMarker = new MarkerOptions()
+        LatLng diuLatLng = new LatLng(23.752981287671716,90.3777078984378);
+        MarkerOptions diuMarker = new MarkerOptions()
                 .position(diuLatLng)
                 .title("DIU ")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_icon))
-                .snippet("Versity");*/
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.restaurant_marker_modified))
+                .snippet("Versity");
         googleMap.addMarker(markerOptions);
+        googleMap.addMarker(diuMarker);
 
 
     }
-
     private void initMap() {
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().
-                findFragmentById(R.id.tourMapFragment);
+                findFragmentById(R.id.mapFragment);
         supportMapFragment.getMapAsync(this);
-    }
-    private void init(View view) {
     }
 
     @Override
@@ -183,7 +186,6 @@ public class TourMapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        Toasty.info(getContext(),"Map Ready");
         this.googleMap = googleMap;
         if (mLocationPermission) {
             getDeviceCurrentLocation();

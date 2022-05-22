@@ -7,11 +7,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.TourMapFragment">
 
+
     <fragment
-        android:id="@+id/tourMapFragment"
+        android:id="@+id/mapFragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
